@@ -37,7 +37,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: landscapedatacommons/sami-test:${{ steps.package-version.outputs.version }}
+          tags: krstphr/sami-test:${{ steps.package-version.outputs.version }}
 
     # deploy on remote server
       - uses: appleboy/ssh-action@master
