@@ -1,0 +1,14 @@
+services:
+
+  sami:
+    image: krstphr/sami-test:1.0.1
+    restart: always
+    ports:
+      - 3000:3000
+    deploy:
+      replicas: 3
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy: 
+        condition: on-failure
